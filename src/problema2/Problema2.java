@@ -15,6 +15,16 @@ import java.util.Map;
  *
  * @author Gabi
  */
+
+/*
+2. In a company’s hierarchy, some employees manage other employees, who can in turn manage other employees. 
+The input format for the hierarchy is (name, sub-hierarchy_1, sub-hierarchy_2, … , sub-hierarchy_n),
+with every sub-hierarchy having the same format, recursively. Your task is to write code that parses the hierarchy, 
+removes employees that are marked as “Unavailable” along with all the employees they manage and prints the
+resulting hierarchy.Input:
+(“John”, (“Jasmine”, (“Jay”), (“Unavailable”)), (“Unavailable”, (“Jack”, (“Jeremy”))), (“Johanna”))Output:
+(“John”, (“Jasmine”, (“Jay”)), (“Johanna”))
+*/
 public class Problema2 {
 
     static Map<Integer, Node> employees = new HashMap<Integer, Node>();
@@ -195,5 +205,4 @@ public class Problema2 {
 
         System.out.println("Output = " + t2.output(root, 0));
     }
-
 }
